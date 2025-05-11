@@ -1,5 +1,6 @@
 # CS50W-Commerce
 2025 problem set
+
 ├── auctions/
 │   ├── migrations/
 │   ├── static/
@@ -85,7 +86,7 @@ CS50 Web is an advanced course offered by **Harvard University**, focusing on **
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/yourusername/your-repo.git
+git clone [https://github.com/yourusername/your-repo.git](https://github.com/VIDAKHOSHPEY22/CS50W-Commerce.git)
 cd your-repo
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -94,8 +95,9 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
 
+## ok now what?
 ✅ **How to Use This README:**  
-1️⃣ **Replace `yourusername/your-repo` with your actual GitHub repository link.**  
+1️⃣ **Replace `VIDAKHOSHPEY22/CS50W-Commerce` with your actual GitHub repository link.**  
 2️⃣ **Modify the project description and features if needed.**  
 3️⃣ **Copy and paste this into your `README.md` file in your GitHub repository.**  
 
