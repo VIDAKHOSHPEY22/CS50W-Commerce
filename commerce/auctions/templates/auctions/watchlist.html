@@ -1,0 +1,36 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>My Watchlist</h2>
+
+    {% if watchlist_items %}
+        <ul>
+            {% for item in watchlist_items %}
+                <li>
+                    <a href="{% url 'listing_detail' item.listing.id %}">{{ item.listing.title }}</a>
+                    <br>
+                    <strong>Current Price:</strong> ${{ item.listing.starting_bid }}
+                    <br>
+                    {% if item.listing.image_url %}
+                        <img src="{{ item.listing.image_url }}" alt="{{ item.listing.title }}" width="200">
+                    {% endif %}
+                    <br>
+                    <strong>Category:</strong> {{ item.listing.category }}
+                    <br>
+                    <strong>Owner:</strong> {{ item.listing.owner.username }}
+                    <br>
+
+                    <!-- دکمه حذف از لیست علاقه‌مندی‌ها -->
+                    <form action="{% url 'toggle_watchlist' item.listing.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Remove from Watchlist</button>
+                    </form>
+
+                    <br><br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Your watchlist is empty.</p>
+    {% endif %}
+{% endblock %}
